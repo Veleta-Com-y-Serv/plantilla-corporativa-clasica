@@ -1,0 +1,41 @@
+/* Corporativa clásica — estilo sobrio: titulares con serifa, filetes finos, esquinas rectas, mucho aire. */
+@import "tailwindcss";
+@import "./comun.css";
+@config "../../tailwind.config.mjs";
+
+:root {
+  --fuente-texto: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --fuente-titulos: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, Cambria, "Times New Roman", serif;
+  --radio: 0; --ritmo: 4.5rem; --ritmo-md: 7rem; --ancho: 74rem; }
+
+@layer base {
+  body { font-family: var(--fuente-texto); font-size: 1.0625rem; line-height: 1.65; }
+  h1, h2, h3 { font-family: var(--fuente-titulos); font-weight: 500; letter-spacing: -0.01em; line-height: 1.15; }
+}
+
+@layer components {
+  .antetitulo { font-size: .75rem; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--c-acento); display: flex; align-items: center; gap: .75rem; }
+  .antetitulo::before { content: ""; width: 2rem; height: 1px; background: currentColor; }
+  .titular--centro .antetitulo { justify-content: center; }
+  .titulo-seccion { font-size: clamp(1.9rem, 4.5vw, 2.9rem); margin-top: .9rem; color: var(--c-primario); }
+  .titular { max-width: 44rem; margin-bottom: 3rem; }
+  .titular--centro { margin-inline: auto; text-align: center; }
+  .titular-texto { margin-top: 1.1rem; opacity: .8; font-size: 1.1rem; }
+
+  .btn { background: var(--c-primario); color: #fff; border: 1px solid var(--c-primario); font-size: .9rem; letter-spacing: .04em; }
+  .btn:hover { background: color-mix(in srgb, var(--c-primario) 85%, #000); }
+  .btn-sec { border: 1px solid currentColor; font-size: .9rem; letter-spacing: .04em; }
+  .btn-sec:hover { background: color-mix(in srgb, currentColor 8%, transparent); }
+
+  .cabecera--clasica { background: var(--c-fondo); border-bottom: 1px solid color-mix(in srgb, var(--c-texto) 12%, transparent); }
+  .cabecera--clasica .cabecera-fila { min-height: 4.75rem; }
+  .cabecera--clasica .marca-inicial { display: grid; place-items: center; width: 2.4rem; height: 2.4rem; border: 1px solid var(--c-primario); color: var(--c-primario); font-family: var(--fuente-titulos); font-size: 1.3rem; }
+  .cabecera--clasica .marca-nombre { font-family: var(--fuente-titulos); font-size: 1.2rem; color: var(--c-primario); }
+  .cabecera--clasica .cabecera-nav a { font-size: .85rem; letter-spacing: .06em; text-transform: uppercase; }
+  .cabecera--clasica .cabecera-nav a:hover { color: var(--c-acento); }
+  .cabecera--clasica .cabecera-cta { min-height: 2.5rem; padding-inline: 1.1rem; }
+
+  .pie--clasico { background: var(--c-primario); color: #f4f1ea; }
+  .pie--clasico .pie-nombre { font-family: var(--fuente-titulos); font-weight: 500; font-size: 1.5rem; }
+  .formulario .campo input, .formulario .campo textarea { background: #fff; }
+}

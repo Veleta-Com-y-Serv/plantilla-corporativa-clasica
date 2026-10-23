@@ -1,0 +1,97 @@
+# Contenido de la web. Es lo único que rellena la plataforma NoExpertise.
+# Las secciones se muestran en el orden de este fichero. Para ocultar una: activa: false.
+nombre: Arnal & Lasierra Asesores
+eslogan: Asesoría fiscal, laboral y contable para pymes y autónomos en Huesca.
+sector: despacho
+logo: ""          # ruta a una imagen en public/ (p. ej. /logo.svg). Vacío = nombre en texto.
+colores:
+  primario: "#1d2b44"
+  acento: "#a8804a"
+  fondo: "#fbfaf7"
+  texto: "#1f2328"
+contacto:
+  telefono: "974 22 18 40"
+  email: hola@arnal-lasierra.es
+  direccion: Calle Coso Alto 23, 2.º, 22003 Huesca
+  horario: Lunes a jueves de 9:00 a 14:00 y de 16:00 a 19:00. Viernes de 9:00 a 14:00.
+  whatsapp: "+34 674 22 18 40"
+redes:
+  instagram: ""
+  facebook: ""
+  linkedin: https://www.linkedin.com/
+menu:
+  - { texto: Servicios, url: "/#servicios" }
+  - { texto: El despacho, url: "/#sobre-nosotros" }
+  - { texto: Equipo, url: "/#equipo" }
+  - { texto: Contacto, url: "/#contacto" }
+boton_cabecera: { texto: Pide cita, url: "/#contacto" }
+seo:
+  titulo: Arnal & Lasierra Asesores · Asesoría fiscal y laboral en Huesca
+  descripcion: Llevamos la contabilidad, los impuestos y las nóminas de pymes y autónomos del Alto Aragón desde 1998. Primera consulta sin coste.
+  tipo: AccountingService   # tipo de schema.org (LocalBusiness, Dentist, Restaurant…)
+marca_pie: true   # «Web creada con NoExpertise» en el pie (plan gratis)
+
+secciones:
+  hero:
+    activa: true
+    antetitulo: Asesoría en Huesca desde 1998
+    titulo: Tus números, en orden. Tu tiempo, para tu negocio.
+    texto: Llevamos impuestos, contabilidad y nóminas de pymes y autónomos. Te explicamos cada paso sin tecnicismos.
+    imagen: /placeholders/hero.svg
+    cta: { texto: Pide una primera consulta, url: "/#contacto" }
+    cta_secundario: { texto: Ver servicios, url: "/#servicios" }
+    items:   # cifras de la franja inferior
+      - { titulo: "25", texto: años de experiencia }
+      - { titulo: "340", texto: clientes activos }
+      - { titulo: "6", texto: profesionales colegiados }
+      - { titulo: "48 h", texto: para responder cualquier consulta }
+
+  servicios:
+    activa: true
+    antetitulo: Servicios
+    titulo: Lo que hacemos por ti
+    texto: Un solo despacho para todo el papeleo. Sin sorpresas en el precio.
+    items:
+      - { titulo: Fiscal, texto: "IVA, IRPF, Sociedades y modelos trimestrales. Planificamos para que pagues lo justo.", icono: balanza }
+      - { titulo: Laboral, texto: "Nóminas, contratos, altas y bajas, y trato con la Seguridad Social.", icono: usuarios }
+      - { titulo: Contable, texto: "Contabilidad al día, cuentas anuales y libros oficiales.", icono: grafico }
+      - { titulo: Mercantil, texto: "Constitución de sociedades, actas, cambios de socios y herencias de empresa.", icono: maletin }
+
+  sobre-nosotros:
+    activa: true
+    antetitulo: El despacho
+    titulo: Cercanos, rigurosos y a tu lado
+    texto: |
+      Nacimos en 1998 en el Coso de Huesca. Hoy somos seis profesionales y seguimos trabajando igual: cada cliente tiene un asesor de referencia que conoce su negocio.
+
+      Revisamos tu situación cada trimestre y te avisamos antes de que llegue un plazo. Así no hay prisas ni recargos.
+    imagen: /placeholders/sobre.svg
+    items:
+      - { titulo: Un asesor de referencia, texto: Siempre hablas con la misma persona., icono: usuarios }
+      - { titulo: Precio cerrado, texto: Cuota mensual sin extras escondidos., icono: escudo }
+      - { titulo: Avisos de plazos, texto: Te recordamos cada vencimiento con tiempo., icono: calendario }
+
+  equipo:
+    activa: true
+    antetitulo: Equipo
+    titulo: Las personas que llevan tus cuentas
+    personas:
+      - { nombre: Pilar Arnal, cargo: Socia · Fiscal, foto: /placeholders/persona.svg, texto: Economista colegiada. 25 años en asesoría fiscal. }
+      - { nombre: Javier Lasierra, cargo: Socio · Mercantil, foto: /placeholders/persona.svg, texto: "Abogado. Sociedades, contratos y empresa familiar." }
+      - { nombre: Marta Gracia, cargo: Laboral, foto: /placeholders/persona.svg, texto: Graduada social. Nóminas y Seguridad Social. }
+      - { nombre: Daniel Puyuelo, cargo: Contabilidad, foto: /placeholders/persona.svg, texto: Contabilidad de pymes y cooperativas. }
+
+  testimonios:
+    activa: true
+    antetitulo: Clientes
+    titulo: Lo que dicen quienes ya trabajan con nosotros
+    testimonios:
+      - { texto: "Desde que estamos con ellos no hemos tenido ni un recargo. Y cuando llamo, me lo explican claro.", autor: "Ana Bescós · Ferretería Bescós" }
+      - { texto: Nos ayudaron a convertir la empresa familiar en sociedad sin perder un día de trabajo., autor: "Luis Allué · Transportes Allué" }
+      - { texto: Son serios y cercanos a la vez. Para un autónomo eso vale mucho., autor: "Elena Sanz · Fisioterapeuta" }
+
+  contacto:
+    activa: true
+    antetitulo: Contacto
+    titulo: Hablemos de tu caso
+    texto: La primera consulta es sin coste. Cuéntanos qué necesitas y te llamamos en menos de 48 horas.

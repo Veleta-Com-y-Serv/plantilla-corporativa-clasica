@@ -1,0 +1,13 @@
+# Metadatos de la plantilla para el catálogo de NoExpertise.
+id: corporativa-clasica
+nombre: Corporativa clásica
+descripcion: Web seria y ordenada para despachos, asesorías y empresas de servicios.
+sectores: [servicios, despacho, consultoria]
+secciones: [hero, servicios, sobre-nosotros, equipo, testimonios, contacto]
+estilo: sobrio
+plan_minimo: gratis
+version: 1.0.0
+base: astrowind
+demo_url: https://demo-plantilla-corporativa-clasica.noexpertise.com
+activa: true
+orden: 10

@@ -1,0 +1,44 @@
+---
+// Contacto: datos del despacho a la izquierda, formulario a la derecha.
+import { seccion, site, tel, mapa, whatsapp } from '../../data/site';
+import Seccion from '../ui/Seccion.astro';
+import Titular from '../ui/Titular.astro';
+import Icono from '../ui/Icono.astro';
+import FormularioContacto from '../ui/FormularioContacto.astro';
+interface Props { id: string }
+const s = seccion(Astro.props.id);
+const c = site.contacto;
+const datos = [
+  c.telefono && { icono: 'telefono', etiqueta: 'Teléfono', valor: c.telefono, url: tel(c.telefono) },
+  c.email && { icono: 'correo', etiqueta: 'Email', valor: c.email, url: `mailto:${c.email}` },
+  c.whatsapp && { icono: 'whatsapp', etiqueta: 'WhatsApp', valor: c.whatsapp, url: whatsapp(c.whatsapp) },
+  c.direccion && { icono: 'mapa', etiqueta: 'Oficina', valor: c.direccion, url: mapa(c.direccion) },
+  c.horario && { icono: 'reloj', etiqueta: 'Horario', valor: c.horario, url: '' },
+].filter(Boolean) as { icono: string; etiqueta: string; valor: string; url: string }[];
+---
+
+{
+  s && (
+    <Seccion id={Astro.props.id}>
+      <div class="grid gap-12 md:grid-cols-2 md:gap-20">
+        <div>
+          <Titular antetitulo={s.antetitulo} titulo={s.titulo} texto={s.texto} />
+          <dl class="divide-y divide-texto/10 border-y border-texto/10">
+            {datos.map((d) => (
+              <div class="flex gap-4 py-4">
+                <Icono nombre={d.icono} class="mt-0.5 shrink-0 text-acento" tam={20} />
+                <div class="min-w-0">
+                  <dt class="text-xs uppercase tracking-[.16em] opacity-60">{d.etiqueta}</dt>
+                  <dd class="mt-0.5 break-words">{d.url ? <a href={d.url} class="hover:text-acento">{d.valor}</a> : d.valor}</dd>
+                </div>
+              </div>
+            ))}
+          </dl>
+        </div>
+        <div class="border border-texto/10 bg-white/60 p-6 md:p-10">
+          <FormularioContacto boton="Solicitar una reunión" />
+        </div>
+      </div>
+    </Seccion>
+  )
+}

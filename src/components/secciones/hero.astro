@@ -1,0 +1,47 @@
+---
+// Hero sobrio: texto a la izquierda, imagen enmarcada con filete desplazado a la derecha, franja de datos debajo.
+import { seccion, site, tel } from '../../data/site';
+import Imagen from '../ui/Imagen.astro';
+interface Props { id: string; primera?: boolean }
+const { id, primera = false } = Astro.props;
+const s = seccion(id);
+const c = site.contacto;
+---
+
+{
+  s && (
+    <section id={id} class="border-b border-texto/10">
+      <div class="contenedor grid items-center gap-12 py-14 md:grid-cols-12 md:py-24">
+        <div class="md:col-span-6">
+          {s.antetitulo && <p class="antetitulo">{s.antetitulo}</p>}
+          <h1 class="mt-5 text-[clamp(2.3rem,6vw,3.9rem)] text-primario">{s.titulo}</h1>
+          {s.texto && <p class="mt-6 max-w-xl text-lg opacity-80">{s.texto}</p>}
+          <div class="mt-9 flex flex-wrap gap-3">
+            {s.cta && <a class="btn" href={s.cta.url}>{s.cta.texto}</a>}
+            {s.cta_secundario && <a class="btn-sec" href={s.cta_secundario.url}>{s.cta_secundario.texto}</a>}
+          </div>
+        </div>
+        <div class="md:col-span-6 md:pl-8">
+          <div class="relative">
+            <div class="absolute inset-0 translate-x-3 translate-y-3 border border-acento md:translate-x-5 md:translate-y-5" aria-hidden="true" />
+            <Imagen src={s.imagen} alt="" ancho={1200} alto={900} prioridad={primera} class="relative aspect-[4/3] w-full object-cover" />
+          </div>
+        </div>
+      </div>
+      {
+        s.items.length > 0 && (
+          <div class="bg-primario text-white">
+            <dl class="contenedor grid grid-cols-2 gap-px md:grid-cols-4">
+              {s.items.map((d) => (
+                <div class="py-6 md:py-8">
+                  <dt class="font-display text-3xl md:text-4xl">{d.titulo}</dt>
+                  <dd class="mt-1 text-sm opacity-75">{d.texto}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        )
+      }
+    </section>
+  )
+}

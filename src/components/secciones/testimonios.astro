@@ -1,0 +1,25 @@
+---
+// Testimonios: franja de color con citas grandes en serifa.
+import { seccion } from '../../data/site';
+import Seccion from '../ui/Seccion.astro';
+interface Props { id: string }
+const s = seccion(Astro.props.id);
+---
+
+{
+  s && (
+    <Seccion id={Astro.props.id} class="bg-primario text-white">
+      {s.antetitulo && <p class="antetitulo">{s.antetitulo}</p>}
+      {s.titulo && <h2 class="mt-4 max-w-2xl text-[clamp(1.8rem,4vw,2.6rem)]">{s.titulo}</h2>}
+      <div class="mt-12 grid gap-10 md:grid-cols-3">
+        {s.testimonios.map((t) => (
+          <figure class="border-l border-acento pl-6">
+            <span class="font-display text-5xl leading-none text-acento" aria-hidden="true">“</span>
+            <blockquote class="font-display text-lg leading-relaxed md:text-xl">{t.texto}</blockquote>
+            <figcaption class="mt-5 text-sm uppercase tracking-[.14em] opacity-75">{t.autor}</figcaption>
+          </figure>
+        ))}
+      </div>
+    </Seccion>
+  )
+}

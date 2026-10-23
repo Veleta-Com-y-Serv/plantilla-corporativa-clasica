@@ -1,0 +1,31 @@
+---
+// Servicios numerados (01, 02…) con filete superior, en columnas.
+import { seccion } from '../../data/site';
+import Seccion from '../ui/Seccion.astro';
+import Titular from '../ui/Titular.astro';
+import Icono from '../ui/Icono.astro';
+interface Props { id: string }
+const s = seccion(Astro.props.id);
+---
+
+{
+  s && (
+    <Seccion id={Astro.props.id}>
+      <div class="grid gap-10 md:grid-cols-12">
+        <Titular class="md:col-span-4" antetitulo={s.antetitulo} titulo={s.titulo} texto={s.texto} />
+        <ol class="grid gap-x-10 gap-y-12 sm:grid-cols-2 md:col-span-8">
+          {s.items.map((it, i) => (
+            <li class="border-t border-primario/25 pt-6">
+              <div class="flex items-center justify-between">
+                <span class="font-display text-2xl text-acento">{String(i + 1).padStart(2, '0')}</span>
+                <Icono nombre={it.icono} class="text-primario/60" />
+              </div>
+              <h3 class="mt-4 text-xl text-primario">{it.titulo}</h3>
+              {it.texto && <p class="mt-2 opacity-80">{it.texto}</p>}
+            </li>
+          ))}
+        </ol>
+      </div>
+    </Seccion>
+  )
+}
