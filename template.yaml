@@ -6,7 +6,7 @@ sectores: [servicios, despacho, consultoria]
 secciones: [hero, servicios, sobre-nosotros, equipo, testimonios, contacto]
 estilo: sobrio
 plan_minimo: gratis
-version: 1.0.0
+version: 1.1.0
 base: astrowind
 demo_url: https://demo-plantilla-corporativa-clasica.noexpertise.com
 activa: true

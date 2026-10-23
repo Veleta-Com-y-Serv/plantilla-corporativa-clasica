@@ -37,7 +37,7 @@ secciones:
     antetitulo: Asesoría en Huesca desde 1998
     titulo: Tus números, en orden. Tu tiempo, para tu negocio.
     texto: Llevamos impuestos, contabilidad y nóminas de pymes y autónomos. Te explicamos cada paso sin tecnicismos.
-    imagen: /placeholders/hero.svg
+    imagen: /fotos/hero.jpg
     cta: { texto: Pide una primera consulta, url: "/#contacto" }
     cta_secundario: { texto: Ver servicios, url: "/#servicios" }
     items:   # cifras de la franja inferior
@@ -65,7 +65,7 @@ secciones:
       Nacimos en 1998 en el Coso de Huesca. Hoy somos seis profesionales y seguimos trabajando igual: cada cliente tiene un asesor de referencia que conoce su negocio.
 
       Revisamos tu situación cada trimestre y te avisamos antes de que llegue un plazo. Así no hay prisas ni recargos.
-    imagen: /placeholders/sobre.svg
+    imagen: /fotos/sobre.jpg
     items:
       - { titulo: Un asesor de referencia, texto: Siempre hablas con la misma persona., icono: usuarios }
       - { titulo: Precio cerrado, texto: Cuota mensual sin extras escondidos., icono: escudo }
@@ -76,10 +76,10 @@ secciones:
     antetitulo: Equipo
     titulo: Las personas que llevan tus cuentas
     personas:
-      - { nombre: Pilar Arnal, cargo: Socia · Fiscal, foto: /placeholders/persona.svg, texto: Economista colegiada. 25 años en asesoría fiscal. }
-      - { nombre: Javier Lasierra, cargo: Socio · Mercantil, foto: /placeholders/persona.svg, texto: "Abogado. Sociedades, contratos y empresa familiar." }
-      - { nombre: Marta Gracia, cargo: Laboral, foto: /placeholders/persona.svg, texto: Graduada social. Nóminas y Seguridad Social. }
-      - { nombre: Daniel Puyuelo, cargo: Contabilidad, foto: /placeholders/persona.svg, texto: Contabilidad de pymes y cooperativas. }
+      - { nombre: Pilar Arnal, cargo: Socia · Fiscal, foto: /fotos/persona-1.jpg, texto: Economista colegiada. 25 años en asesoría fiscal. }
+      - { nombre: Javier Lasierra, cargo: Socio · Mercantil, foto: /fotos/persona-2.jpg, texto: "Abogado. Sociedades, contratos y empresa familiar." }
+      - { nombre: Marta Gracia, cargo: Laboral, foto: /fotos/persona-3.jpg, texto: Graduada social. Nóminas y Seguridad Social. }
+      - { nombre: Daniel Puyuelo, cargo: Contabilidad, foto: /fotos/persona-4.jpg, texto: Contabilidad de pymes y cooperativas. }
 
   testimonios:
     activa: true

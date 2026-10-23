@@ -40,3 +40,5 @@ Antes de dar una orden por buena: `npm run build` sin errores.
 ## Campos propios de esta plantilla (además del esquema común)
 - `hero.items`: cifras de la franja inferior (`titulo` = cifra, `texto` = etiqueta).
 - `sobre-nosotros.items`: compromisos con icono. `texto` admite varios párrafos (línea en blanco entre ellos).
+
+Fotos de partida en public/fotos/ (generadas con IA, sin derechos de terceros); los SVG de public/placeholders/ siguen de respaldo.
