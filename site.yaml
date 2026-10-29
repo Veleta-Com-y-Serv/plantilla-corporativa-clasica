@@ -91,6 +91,17 @@ secciones:
       - { texto: Nos ayudaron a convertir la empresa familiar en sociedad sin perder un día de trabajo., autor: "Luis Allué · Transportes Allué" }
       - { texto: Son serios y cercanos a la vez. Para un autónomo eso vale mucho., autor: "Elena Sanz · Fisioterapeuta" }
 
+  preguntas:
+    activa: true
+    antetitulo: Preguntas frecuentes
+    titulo: Lo que nos preguntan antes de empezar
+    preguntas:
+      - { pregunta: "¿La primera consulta tiene coste?", respuesta: "No. La primera reunión para conocer tu caso es gratuita y sin compromiso, en el despacho o por videollamada." }
+      - { pregunta: "¿Trabajáis con autónomos o solo con empresas?", respuesta: "Con los dos. Llevamos la fiscalidad, la contabilidad y las nóminas de autónomos, pymes y sociedades familiares." }
+      - { pregunta: "¿Puedo cambiar de asesoría a mitad de año?", respuesta: "Sí. Nos encargamos del traspaso con tu asesoría anterior para que ningún trámite se quede a medias." }
+      - { pregunta: "¿Cómo os hago llegar las facturas?", respuesta: "Como te resulte más cómodo: por correo, en papel en el despacho o en una carpeta compartida. Te recordamos cada plazo con tiempo." }
+      - { pregunta: "¿Qué incluye la cuota mensual?", respuesta: "Lo que acordemos por escrito antes de empezar: impuestos, contabilidad o nóminas. Precio cerrado, sin extras escondidos." }
+
   contacto:
     activa: true
     antetitulo: Contacto

@@ -3,10 +3,17 @@ id: corporativa-clasica
 nombre: Corporativa clásica
 descripcion: Web seria y ordenada para despachos, asesorías y empresas de servicios.
 sectores: [servicios, despacho, consultoria]
-secciones: [hero, servicios, sobre-nosotros, equipo, testimonios, contacto]
+secciones:
+  - { id: hero, nombre: Portada }
+  - { id: servicios, nombre: Servicios }
+  - { id: sobre-nosotros, nombre: Sobre nosotros }
+  - { id: equipo, nombre: Equipo }
+  - { id: testimonios, nombre: Opiniones de clientes }
+  - { id: preguntas, nombre: Preguntas frecuentes }
+  - { id: contacto, nombre: Contacto }
 estilo: sobrio
 plan_minimo: gratis
-version: 1.3.0
+version: 1.4.0
 base: astrowind
 demo_url: https://demo-plantilla-corporativa-clasica.noexpertise.com
 activa: true
@@ -43,6 +50,12 @@ asistente:
     ayuda: "Las fotos las pones luego en Contenido."
     tipo: lista
     campos: [secciones.equipo.personas]
+  - id: preguntas
+    titulo: "Preguntas frecuentes"
+    pregunta: "¿Qué os preguntan más a menudo? Escribe cada pregunta y lo que respondéis."
+    ayuda: "Si lo prefieres, añádelos luego en Contenido."
+    tipo: lista
+    campos: [secciones.preguntas.preguntas]
   - id: fotos
     titulo: "Tus fotos"
     pregunta: "Pon una foto de portada y, si quieres, alguna más."

@@ -1,6 +1,7 @@
 ---
 // Hero sobrio: texto a la izquierda, imagen enmarcada con filete desplazado a la derecha, franja de datos debajo.
 import { seccion, site, tel } from '../../data/site';
+import { altHero } from '../../lib/seo';
 import Imagen from '../ui/Imagen.astro';
 interface Props { id: string; primera?: boolean }
 const { id, primera = false } = Astro.props;
@@ -24,7 +25,7 @@ const c = site.contacto;
         <div class="md:col-span-6 md:pl-8">
           <div class="relative">
             <div class="absolute inset-0 translate-x-3 translate-y-3 border border-acento md:translate-x-5 md:translate-y-5" aria-hidden="true" />
-            <Imagen src={s.imagen} alt="" ancho={1200} alto={900} prioridad={primera} class="relative aspect-[4/3] w-full object-cover" />
+            <Imagen src={s.imagen} alt={altHero()} ancho={1200} alto={900} prioridad={primera} class="relative aspect-[4/3] w-full object-cover" />
           </div>
         </div>
       </div>

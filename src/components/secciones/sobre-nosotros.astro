@@ -1,6 +1,7 @@
 ---
 // Sobre nosotros: imagen + texto en párrafos + lista de compromisos.
 import { seccion, parrafos } from '../../data/site';
+import { altSeccion } from '../../lib/seo';
 import Seccion from '../ui/Seccion.astro';
 import Imagen from '../ui/Imagen.astro';
 import Icono from '../ui/Icono.astro';
@@ -12,7 +13,7 @@ const s = seccion(Astro.props.id);
   s && (
     <Seccion id={Astro.props.id} class="bg-primario/[0.04]">
       <div class="grid items-start gap-12 md:grid-cols-2 md:gap-16">
-        <Imagen src={s.imagen} alt="" ancho={1000} alto={1200} class="aspect-[5/6] w-full object-cover" />
+        <Imagen src={s.imagen} alt={altSeccion(s)} ancho={1000} alto={1200} class="aspect-[5/6] w-full object-cover" />
         <div>
           {s.antetitulo && <p class="antetitulo">{s.antetitulo}</p>}
           <h2 class="titulo-seccion">{s.titulo}</h2>
