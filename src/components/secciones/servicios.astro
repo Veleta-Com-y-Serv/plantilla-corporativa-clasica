@@ -1,9 +1,10 @@
 ---
-// Servicios numerados (01, 02…) con filete superior, en columnas.
+// Servicios numerados (01, 02…) con filete superior, en columnas. Los servicios con `detalle` tienen página propia\n// (/servicios/<slug>/) y la tarjeta entera enlaza a ella; sin `detalle` quedan como texto.
 import { seccion } from '../../data/site';
 import Seccion from '../ui/Seccion.astro';
 import Titular from '../ui/Titular.astro';
 import Icono from '../ui/Icono.astro';
+import { enlaceDe } from '../../lib/paginas';
 interface Props { id: string }
 const s = seccion(Astro.props.id);
 ---
@@ -15,13 +16,14 @@ const s = seccion(Astro.props.id);
         <Titular class="md:col-span-4" antetitulo={s.antetitulo} titulo={s.titulo} texto={s.texto} />
         <ol class="grid gap-x-10 gap-y-12 sm:grid-cols-2 md:col-span-8">
           {s.items.map((it, i) => (
-            <li class="border-t border-primario/25 pt-6">
+            <li class="servicio border-t border-primario/25 pt-6">
               <div class="flex items-center justify-between">
                 <span class="font-display text-2xl text-acento">{String(i + 1).padStart(2, '0')}</span>
                 <Icono nombre={it.icono} class="text-primario/60" />
               </div>
-              <h3 class="mt-4 text-xl text-primario">{it.titulo}</h3>
+              <h3 class="mt-4 text-xl text-primario">{enlaceDe(it) ? <a href={enlaceDe(it)} class="servicio-enlace">{it.titulo}</a> : it.titulo}</h3>
               {it.texto && <p class="mt-2 opacity-80">{it.texto}</p>}
+              {enlaceDe(it) && <span class="servicio-ver" aria-hidden="true">Ver más <Icono nombre="flecha" tam={16} /></span>}
             </li>
           ))}
         </ol>
@@ -29,3 +31,13 @@ const s = seccion(Astro.props.id);
     </Seccion>
   )
 }
+
+<style>
+  .servicio { position: relative; }
+  .servicio-enlace { text-decoration: none; color: inherit; }
+  .servicio-enlace:hover { color: var(--c-acento); }
+  .servicio-enlace::after { content: ""; position: absolute; inset: 0; }
+  .servicio-enlace:focus-visible { outline: none; }
+  .servicio:has(.servicio-enlace:focus-visible) { outline: 2px solid var(--c-acento); outline-offset: 4px; }
+  .servicio-ver { display: inline-flex; align-items: center; gap: .3rem; margin-top: .9rem; font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; color: var(--c-acento); }
+</style>

@@ -53,11 +53,50 @@ secciones:
     titulo: Lo que hacemos por ti
     texto: Un solo despacho para todo el papeleo. Sin sorpresas en el precio.
     items:
-      - { titulo: Fiscal, texto: "IVA, IRPF, Sociedades y modelos trimestrales. Planificamos para que pagues lo justo.", icono: balanza }
-      - { titulo: Laboral, texto: "Nóminas, contratos, altas y bajas, y trato con la Seguridad Social.", icono: usuarios }
-      - { titulo: Contable, texto: "Contabilidad al día, cuentas anuales y libros oficiales.", icono: grafico }
-      - { titulo: Mercantil, texto: "Constitución de sociedades, actas, cambios de socios y herencias de empresa.", icono: maletin }
+      - titulo: Fiscal
+        texto: "IVA, IRPF, Sociedades y modelos trimestrales. Planificamos para que pagues lo justo."
+        icono: balanza
+        detalle: |
+          La fiscalidad es el terreno donde más se nota tener a alguien al lado. Nos ocupamos de preparar y presentar tus declaraciones de IVA, IRPF e Impuesto sobre Sociedades, así como los modelos trimestrales y resúmenes anuales que te corresponden según tu actividad, y lo hacemos siempre dentro de plazo.
 
+          Empezamos revisando tu situación de partida: forma jurídica, régimen de tributación, gastos que puedes deducir y obligaciones pendientes. Con esa foto elaboramos un calendario fiscal propio, de modo que sabes qué se presenta, cuándo y con qué importe aproximado mucho antes del vencimiento.
+
+          Una vez al trimestre repasamos tus números y, si vemos margen, te proponemos medidas legales para ajustar la carga: amortizaciones, reparto entre retribución y dividendos, aprovechamiento de incentivos para pymes o cambios de módulo a estimación directa. Nunca aplicamos nada sin explicártelo antes con palabras claras.
+
+          Si llega una notificación o un requerimiento de la Agencia Tributaria, no tienes que afrontarlo solo: lo estudiamos contigo, preparamos la respuesta y hacemos el seguimiento hasta que el expediente queda cerrado.
+      - titulo: Laboral
+        texto: "Nóminas, contratos, altas y bajas, y trato con la Seguridad Social."
+        icono: usuarios
+        detalle: |
+          Contratar a una persona debería ser una buena noticia, no una carrera de papeles. Gestionamos todo el ciclo laboral de tu empresa: elaboración mensual de nóminas, redacción y registro de contratos, altas, bajas y variaciones en la Seguridad Social, y liquidación de cotizaciones.
+
+          Antes de cada contratación te asesoramos sobre la modalidad que mejor encaja con lo que necesitas, qué bonificaciones podrían aplicarse y qué convenio colectivo rige en tu sector. Así evitas errores que luego salen caros, como una categoría mal asignada o una jornada sin reflejar.
+
+          Atendemos también las situaciones delicadas: bajas por enfermedad, permisos, modificaciones de condiciones, despidos y finiquitos. En esos momentos importa tanto el rigor legal como el trato, y por eso las llevamos de la mano con el responsable de tu empresa.
+
+          Cada mes recibes las nóminas revisadas y un resumen del coste laboral, y tus empleados pueden consultarnos dudas sobre su recibo con quien ya conoce su caso. Si hay una inspección, te acompañamos con la documentación en regla.
+      - titulo: Contable
+        texto: "Contabilidad al día, cuentas anuales y libros oficiales."
+        icono: grafico
+        detalle: |
+          Una contabilidad ordenada es la mejor herramienta para decidir con calma. Registramos las facturas y los movimientos de tu negocio, conciliamos los bancos y mantenemos al día los libros oficiales, de forma que en cualquier momento puedes saber cómo va la empresa y no solo cómo ha ido.
+
+          Trabajamos con la documentación como a ti te resulte más cómodo: por correo, en papel o en una carpeta compartida. Nosotros clasificamos, contabilizamos y te devolvemos cada trimestre un balance y una cuenta de resultados explicados sin jerga, con los puntos que merecen tu atención.
+
+          Al cierre del ejercicio preparamos las cuentas anuales, la memoria y su depósito en el Registro Mercantil cuando la sociedad está obligada a ello. También elaboramos informes a medida para el banco, para una subvención o para un posible socio, con los datos presentados de manera clara.
+
+          Si vienes de otra contabilidad desordenada, empezamos por regularizarla con calma: revisamos asientos, cuadramos saldos y dejamos una base fiable sobre la que construir el resto del año.
+      - titulo: Mercantil
+        texto: "Constitución de sociedades, actas, cambios de socios y herencias de empresa."
+        icono: maletin
+        detalle: |
+          Cuando una empresa cambia de forma, conviene que el papeleo vaya a la par que la decisión. Te acompañamos en la constitución de sociedades, desde la elección de la fórmula más adecuada y la redacción de los estatutos hasta la inscripción en el Registro Mercantil y el alta fiscal.
+
+          Después, la vida societaria sigue pidiendo documentos: actas de las juntas, libros de socios, nombramientos y ceses de administradores, ampliaciones o reducciones de capital y entrada o salida de socios. Los preparamos con el rigor de un abogado y los guardamos ordenados para que nunca falte nada.
+
+          Prestamos especial atención a las empresas familiares, donde la relación entre las personas pesa tanto como los números. Te ayudamos a plantear con tiempo un protocolo familiar, la sucesión en la gestión o la transmisión de participaciones, y a valorar su efecto fiscal antes de firmar.
+
+          Si necesitas redactar un contrato entre empresas o un pacto de socios, lo estudiamos contigo y lo dejamos por escrito con las garantías razonables para todas las partes.
   sobre-nosotros:
     activa: true
     antetitulo: El despacho
