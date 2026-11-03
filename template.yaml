@@ -13,7 +13,7 @@ secciones:
   - { id: contacto, nombre: Contacto }
 estilo: sobrio
 plan_minimo: gratis
-version: 1.6.0
+version: 1.6.1
 base: astrowind
 demo_url: https://demo-plantilla-corporativa-clasica.noexpertise.com
 activa: true
@@ -24,10 +24,9 @@ fichas:
   - { lista: servicios, campo: items, ruta: servicios, nombre: Servicio, tipo: Service }
 
 # Varias páginas (docs/plantillas.md § Varias páginas): reparto recomendado al activar «Varias páginas».
-# Inicio se queda con la portada y las opiniones de clientes (lo que no está en ninguna página).
+# Inicio se queda con la portada y lo que no esté en ninguna página (aquí, servicios).
 paginas:
-  - { ruta: servicios, titulo: Servicios, secciones: "servicios" }
-  - { ruta: el-despacho, titulo: El despacho, secciones: "sobre-nosotros; equipo" }
+  - { ruta: el-despacho, titulo: El despacho, secciones: "sobre-nosotros; equipo; testimonios" }
   - { ruta: contacto, titulo: Contacto, secciones: "preguntas; contacto" }
 
 # Asistente de puesta en marcha (NoExpertise): un paso por pantalla. Rutas del site sin índices;
